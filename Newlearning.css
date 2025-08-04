@@ -1,0 +1,23 @@
+  .cls {
+            font-size: 35px;
+            cursor: pointer;
+            }
+        .btn {
+            font-style: oblique;
+            background-color: blueviolet;
+            height: 60px;
+            width: 80px;
+            cursor: pointer;
+            border: none;
+            color: aliceblue;
+            border-radius: 2px;
+
+        }
+        .btn:hover {
+            background-color: white
+            opacity: 0.1;
+            
+        }
+        .btn:active {
+            opacity: 0.1;
+        }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    let randomNumber1 = Math.random();
+    let result ='';
+
+    if (randomNumber1 <= 0.5) {result = 'heads'}
+    else {result = 'tails'}
+
+    console.log(result);
+
+    let guess = 'tails'
+
+   // if (guess === result) {console.log('You win.');}
+   // else {console.log('You lose');}
+
+   //guess === result ? console.log ('You win') : //
+   //console.log('You lose'); While this is also correct, below code is more neat
+
+  console.log(guess === result ? 'You win!' : 'You lose!');
+
+  </script>
+  
+</body>
+</html>

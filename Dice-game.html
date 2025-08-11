@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+      let playerMovee = Math.random();
+      let compMove = Math.random();
+      let move = '';
+
+    function computerMove(move) { 
+      if (compMove >= 0 && compMove <1/6) {move = '1'; alert `Computer move: ${move}`}
+      else if (compMove >= 1/6 && compMove < 2/6) {move = '2'; alert `Computer move: ${move}`}
+      else if (compMove >= 2/6 && compMove < 3/6) {move = '3'; alert `Computer move: ${move}`}
+      else if (compMove >= 3/6 && compMove < 4/6) {move = '4'; alert `Computer move: ${move}`}
+      else if (compMove >= 4/6 && compMove < 5/6) {move = '5'; alert `Computer move: ${move}`}
+      else if (compMove >= 5/6 && compMove < 1) {move = '6'; alert `Computer move: ${move}`}
+
+      let result = '';
+
+      if (move === '1' && playerMovee === !1);
+
+      alert(`Your move is ${playerMovee} and computer move is ${computerMove}, hence next round `)
+
+
+    }
+
+  </script>
+  
+</body>
+</html>

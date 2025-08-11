@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f4f4f4;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      font-size: 18px;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1>🎲 Dice Game</h1>
+  <button onclick="playGame()">Start Game</button>
+ 
+  <div class="result" id="log"></div>
+ 
+  <script>
+    function rollDice() {
+      return Math.floor(Math.random() * 6) + 1;
+    }
+ 
+    function playGame() {
+      let player1Score = 0;
+      let player2Score = 0;
+      let log = '';
+      let gameEnded = false;
+ 
+      for (let round = 1; round <= 6; round++) {
+        const roll1 = rollDice();
+        const roll2 = rollDice();
+ 
+        log += `<strong>Round ${round}:</strong> Player 1 rolled ${roll1}, Player 2 rolled ${roll2}<br>`;
+ 
+        player1Score += roll1;
+        player2Score += roll2;
+ 
+        if (roll1 === roll2) {
+          log += `🎯 Dice matched in Round ${round}! Game ends early.<br>`;
+          gameEnded = true;
+          break;
+        }
+      }
+ 
+      log += `<br><strong>Final Scores:</strong><br>`;
+      log += `Player 1: ${player1Score}<br>`;
+      log += `Player 2: ${player2Score}<br>`;
+ 
+      if (player1Score > player2Score) {
+        log += `<h3>🏆 Player 1 Wins!</h3>`;
+      } else if (player2Score > player1Score) {
+        log += `<h3>🏆 Player 2 Wins!</h3>`;
+      } else {
+        log += `<h3>🤝 It's a Draw!</h3>`;
+      }
+ 
+      document.getElementById("log").innerHTML = log;
+    }
+  </script>
+ 
+</body>
+</html>
